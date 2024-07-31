@@ -112,8 +112,10 @@ public static class ExampleGenConfig
     
     public static List<Type> BlackGenericTypeList = new List<Type>()
     {
+#if UNITY_2021_OR_NEWER
         typeof(Span<>),
         typeof(ReadOnlySpan<>),
+#endif
     };
 
     private static bool IsBlacklistedGenericType(Type type)
