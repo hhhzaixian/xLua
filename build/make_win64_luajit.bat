@@ -1,6 +1,17 @@
 @echo off
 
-call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
+set vcvars64="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
+if exist %vcvars64% (
+	call %vcvars64%
+) else (
+	set vcvars64="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat"
+	if exist %vcvars64% (
+		call %vcvars64%
+	) else (
+		echo fail to execute vcvars64.bat
+		exit /B 1
+	)
+)
 
 echo Swtich to x64 build env
 cd %~dp0\luajit-2.1.0b3\src

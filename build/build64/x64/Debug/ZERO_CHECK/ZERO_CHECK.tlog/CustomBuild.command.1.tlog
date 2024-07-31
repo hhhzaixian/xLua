@@ -1,0 +1,10 @@
+^D:\FORKSOURCE\XLUA-HHHZAIXIAN\BUILD\BUILD64\CMAKEFILES\7FB6B91670368F1B40E06346602092CC\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/ForkSource/xLua-hhhzaixian/build -BD:/ForkSource/xLua-hhhzaixian/build/build64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/ForkSource/xLua-hhhzaixian/build/build64/XLua.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

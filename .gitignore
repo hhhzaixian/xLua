@@ -10,7 +10,8 @@ Assets/xLuaTest.meta
 Assets/xLuaTest/
 /*.csproj
 /*.sln
-/build/build*
+/build/build64/CMakeFiles
+/build/build64/xlua.dir
 UnityVS
 /Assets/UnityVS.meta
 .DS_Store
@@ -40,3 +41,5 @@ build/luajit-2.1.0b2/src/luajit.lib
 
 .idea
 Logs
+*.user
+*.filters
