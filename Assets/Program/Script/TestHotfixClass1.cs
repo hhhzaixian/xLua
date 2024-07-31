@@ -10,7 +10,7 @@ public class TestHotfixClass1 : MonoBehaviour
         public Color color;
 
         /// <summary>
-        /// 这个构造函数的参数，不能是int时会导致xlua注入失败，提示：Error:can not find delegate for DNA.UI.PanelCommonModalMaskController/OpenData..ctor! try re-genertate code.
+        /// 这个构造函数的参数，不能是int时会导致xlua注入失败，提示：Error:can not find delegate for TestHotfixClass1/Data..ctor! try re-genertate code.
         /// </summary>
         /// <param name="color"></param>
         public Data(Color color)

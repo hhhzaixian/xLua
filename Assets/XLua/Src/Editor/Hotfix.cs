@@ -62,7 +62,8 @@ namespace XLua
 
             foreach (var type in get_cfg())
             {
-                if (!IsDeclaringTypeWithObsoleteAttr(type)
+                if (//!type.IsDefined(typeof(ObsoleteAttribute), false)
+                    !IsDeclaringTypeWithObsoleteAttr(type)
                     && !type.IsEnum && !typeof(Delegate).IsAssignableFrom(type)
                     && (!type.IsGenericType || type.IsGenericTypeDefinition))
                 {
